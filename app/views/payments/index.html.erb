@@ -1,0 +1,63 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Payments</h1>
+
+<table>
+  <thead>
+    <tr class="list_line_even">
+      <th></th>
+      <th>Type</th>
+      <th>Account</th>
+      <th>Summa</th>
+      <th>Status</th>
+      <th>Cashback</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @payments.each do |payment| %>
+      <tr class="<%= cycle('list_line_odd','list_line_even') %>">
+        <% if payment.payment_type.downcase == 'mobile' %>
+          <td> <%= image_tag('mobile_payment.jpg', class: 'list_image') %> </td>
+        <% else %>
+          <td></td>
+        <% end %>
+        <td class='list_description'>
+          <dl>
+            <dt><%= payment.payment_type.upcase %></dt>
+          </dl>
+        </td>
+        <td class='list_description'>
+          <dl>
+            <dt><%= payment.payment_account %></dt>
+          </dl>
+        </td>
+        <td class='list_description'>
+          <dl>
+            <dt><%= payment.payment_summa %></dt>
+          </dl>
+        </td>
+        <td class='list_description'>
+          <dl>
+            <dt><%= payment.payment_status.upcase %></dt>
+          </dl>
+        </td>
+        <td class='list_description'>
+          <dl>
+            <dt><%= payment.cashback.to_s + "$" %></dt>
+          </dl>
+        </td>
+        <td class='link_actions'>
+          <%= link_to 'Show', payment %><br/>
+          <%= link_to 'Edit', edit_payment_path(payment) %><br/>
+          <%= link_to 'Destroy', payment, method: :delete, data: { confirm: 'Are you sure?' } %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Payment', new_payment_path %>

@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  payment_type: "mobile"
+  payment_account: 13242323221311
+  payment_summa: 123
+  payment_status: 'paid'
+  cashback: 1
+
+two:
+  payment_type: "mobile"
+  payment_account: 1234567891011
+  payment_summa: 134
+  payment_status: 'paid'
+  cashback: 1

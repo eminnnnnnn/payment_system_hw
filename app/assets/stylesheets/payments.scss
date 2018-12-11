@@ -1,0 +1,49 @@
+// Place all the styles related to the Payments controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+.payments {
+
+   margin-left: 0;
+   margin-top: 80px;
+    table {
+      border-collapse: collapse;
+      border-style: solid;
+      border-width: thin;
+    }
+    table tr td {
+      border-style: solid;
+      padding: 5px;
+      vertical-align: top;
+      border-width: thin;
+    }
+    .list_image {
+      width: 128px;
+      height: 128px;
+    }
+    .list_description {
+      width: 200px;
+      dl {
+        margin: 0;
+      }
+      dt {
+        color: #244;
+        font-weight: bold;
+        font-size: larger;
+        align-content: center;
+      }
+      dd {
+        margin: 0;
+      }
+    }
+    .list_actions {
+      font-size: x-small;
+      text-align: right;
+      padding-left: 1em;
+    }
+    .list_line_even {
+      background: #a6a6a6;
+    }
+    .list_line_odd {
+      background: #d1d1d1;
+    }
+}

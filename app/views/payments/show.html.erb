@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Type:</strong>
+  <%= @payment.payment_type %>
+</p>
+
+<p>
+  <strong>Account:</strong>
+  <%= @payment.payment_account %>
+</p>
+
+<p>
+  <strong>Summa:</strong>
+  <%= @payment.payment_summa %>
+</p>
+
+<p>
+  <strong>Status:</strong>
+  <%= @payment.payment_status %>
+</p>
+
+<p>
+  <strong>Cashback:</strong>
+  <%= @payment.cashback %>
+</p>
+
+<%= link_to 'Edit', edit_payment_path(@payment) %> |
+<%= link_to 'Back', payments_path %>
