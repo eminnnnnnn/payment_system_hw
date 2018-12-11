@@ -9,13 +9,18 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
-  <body class= '<%= controller.controller_name %>'>
+  <body>
     <div class='header'>
-      <ul class='navmenu'>
-        <li><a href=""> Payments</a> </li>
-        <li> <a href=''>menu</a></li>
+      <!--<ul class='navmenu'>
+        <li><a href=""><span style="color: red;">e</span><span style="color: blue;">P</span><span style="color: green;">a</span><span style="color: orange;">y</span></a> </li>
+        <li id="user-info"><a href=''>Menu</a></li>
+      </ul>-->
+      <a href=""><span style="color: red;">e</span><span style="color: blue;">P</span><span style="color: green;">a</span><span style="color: orange;">y</span></a>
+      <ul id="user-info">
+        <li><a href="">iamuser@iam.ru</a></li>
+        <li><a href=''>Sign Out</a></li>
       </ul>
     </div>
-    <div> <%= yield %> </div>
+    <div class= '<%= controller.controller_name %>'> <%= yield %> </div>
   </body>
 </html>
