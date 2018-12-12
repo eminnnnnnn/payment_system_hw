@@ -1,0 +1,10 @@
+<h1>Field in the fields</h1>
+<br/><br/>
+<%= form_tag url_for(controller: "pages", action: "result"), method: :get do %>
+  <%= label_tag :pay_acc, "Personal Account:" %>
+  <%= text_field "Payment account", :pay_acc %><br/>
+  <%= label_tag :pay_acc, "Personal Account:" %>
+  <%= text_field "Payment account", :pay_acc %><br/>
+  <%= label_tag :pay_acc, "Personal Account:" %>
+  <%= text_field "Payment account", :pay_acc %>
+<% end %>

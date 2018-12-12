@@ -1,0 +1,9 @@
+<h1>Welcome!</h1>
+<h2>On our site you can make the following payments:</h2>
+<br/>
+<div class='images'> <!--onmousemove="move_images_shadow()"-->
+  <%= link_to image_tag("mobile_payment.jpg", border: "1", alt: "mobile-payment"), pages_fill_path(pay_type: "mobile") %>
+  <%= link_to image_tag("fine_payment.jpg", border: "1", alt: "fine-payment"), pages_fill_path(pay_type: "fine") %>
+  <%= link_to image_tag("utilities_payment.jpeg", border: "1", alt: "utilities-payment"), pages_fill_path(pay_type: "utilities") %>
+  <%= link_to image_tag("transfer_payment.jpg", border: "1", alt: "transfer-payment"), pages_fill_path(pay_type: "transfer") %>
+</div>
