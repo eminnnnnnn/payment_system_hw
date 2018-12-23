@@ -25,4 +25,147 @@
     border-color: #000000;
     box-shadow: none;
   }
+  .fill-form {
+    text-align: center;
+    img {
+      margin-bottom: 30px;
+    }
+    input[type="submit"] {
+      background-color: white;
+      color: #4791ff;
+      font-size: 30px;
+      border-color: #4791ff;
+      border-style: solid;
+      border-radius: 20px;
+    }
+    input[type="submit"]:hover {
+      background-color: #4791ff;
+      color: white;
+      transition: .2s;
+    }
+    input[type="text"] {
+      margin-bottom: 30px;
+      border-style: solid;
+      border-color: black;
+      background-color: #e0e0e0;
+      border-radius: 15px;
+      font-size: 30px;
+      padding: 8px;
+    }
+    input[type="text"]:focus {
+      background-color: white;
+    }
+  }
+  .fill-form label {
+    margin-bottom: 5px;
+    font-size: 30px;
+  }
+  .err_msg {
+    color: red;
+    font-size: 10px;
+    font-style: italic;
+  }
+  .confirmation {
+    position: relative;
+    left: 20%;
+    top: 100px;
+    width: 25%;
+  }
+  .check_for_check {
+    left: 200px;
+    border-style: solid;
+    border-radius: 12px;
+    border-color: black;
+    border-width: 2px;
+    tr td {
+      font-size: 24px;
+      height: 44px;
+    }
+    .row_name {
+      font-weight: bold;
+      text-align: right;
+      background-color: #e0e0e0;
+    }
+    .row_name:hover {
+      cursor: default;
+    }
+    .row_data {
+      background-color: #f2f2f2;
+    }
+    .row_data:hover {
+      background-color: #e0e0e0;
+      cursor: pointer;
+    }
+  }
+  #confirm_button {
+    font: caption;
+    background-color: inherit;
+    color: green;
+    border-radius: 15px;
+    border-color: green;
+    border-width: 2px;
+    border-style: solid;
+    font-size: 20px;
+    position: relative;
+    text-decoration: none;
+    left: 45%;
+  }
+  #confirm_button:hover {
+    background-color: green;
+    cursor: pointer;
+    color: white;
+  }
+  #cancel_button {
+    font: caption;
+    background-color: inherit;
+    color: red;
+    border-radius: 15px;
+    border-color: red;
+    border-style: solid;
+    border-width: 2px;
+    font-size: 20px;
+    text-decoration: none;
+    padding-left: 4px;
+    padding-right: 4px;
+  }
+  #cancel_button:hover {
+    background-color: red;
+    cursor: pointer;
+    color: white;
+  }
+  #confirm_image {
+    width: 25%;
+    position: relative;
+    left: 47%;
+    top: -80px;
+    #gal_image {
+      stroke-dasharray: 1000;
+      stroke-dashoffset: 1000;
+      animation: dash 7s linear forwards;
+      @keyframes dash {
+        from {
+          stroke-dashoffset: 1000;
+        }
+        to{
+          stroke-dashoffset: 0;
+        }
+      }
+    }
+  }
+  #check_list{
+    position: relative;
+    left: 65%;
+    top: -280px;
+    width: 35%;
+    text-align: center;
+    p {
+      width: 80%;
+      border-style: solid;
+      border-width: thin;
+      border-color: black;
+      text-decoration: underline;
+      font-size: 20px;
+      font-weight: bold;
+    }
+  }
 }

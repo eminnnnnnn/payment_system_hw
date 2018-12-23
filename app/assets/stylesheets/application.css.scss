@@ -38,6 +38,7 @@ body {
     font-size: 32px;
     margin: 0;
   }
+
   a:hover {
     background-color: #e0e0e0;
     color: #000000;
@@ -55,6 +56,66 @@ body {
   li {
     display: inline-block;
     margin-right: 25px;
+  }
+}
+.login_page {
+  //box-shadow: 10px 10px 5px grey;
+  width: 100%;
+  h2 {
+    text-align: center;
+  }
+  h1 {
+    text-align: center;
+    font-size: 46px;
+  }
+  p {
+    text-align: center;
+  }
+  .field {
+    text-align: center;
+  }
+  .actions {
+    text-align: center;
+  }
+  input[type="submit"] {
+    background-color: inherit;
+    border-radius: 20px;
+    border-color: green;
+    border-style: solid;
+    font-size: 24px;
+  }
+  input[type="submit"]:hover {
+    background-color: green;
+    color: white;
+    cursor: pointer;
+  }
+  input[type="password"] {
+      background-color: #f2f2f2;
+      border-radius: 4px;
+      border-style: solid;
+      border-color: #ebebeb;
+      font-size: 30px;
+  }
+  input[type="password"]:focus {
+      background-color: white;
+  }
+  input[type="email"] {
+      background-color: #f2f2f2;
+      border-radius: 4px;
+      border-style: solid;
+      border-color: #ebebeb;
+      font-size: 30px;
+  }
+  input[type="email"]:focus {
+      background-color: white;
+  }
+/*  input[type="checkbox"] {
+      background-color: #f2f2f2;
+      border-radius: 4px;
+      border-style: solid;
+  }*/
+  input[type="checkbox"]:hover {
+      background-color: #f2f2f2;
   }
 }
 /*ul.navmenu li {

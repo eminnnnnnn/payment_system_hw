@@ -5,4 +5,4 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-Payment.create!(payment_type: 'mobile', payment_account: 89887675665, payment_summa: 250, payment_status: 'paid', cashback: 5)
+p = Payment.create!(payment_type: :mobile, payment_account: 89887675665, payment_summa: 250, payment_status: 'paid', cashback: 5)

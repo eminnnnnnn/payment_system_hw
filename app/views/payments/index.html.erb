@@ -18,19 +18,20 @@
   <tbody>
     <% @payments.each do |payment| %>
       <tr class="<%= cycle('list_line_odd','list_line_even') %>">
-        <% if payment.payment_type.downcase == 'mobile' %>
+      <% if payment[:payment_type].downcase == 'mobile' %>
           <td> <%= image_tag('mobile_payment.jpg', class: 'list_image') %> </td>
         <% else %>
           <td></td>
         <% end %>
+
         <td class='list_description'>
           <dl>
-            <dt><%= payment.payment_type.upcase %></dt>
+            <dt><%= payment[:payment_type].upcase %></dt>
           </dl>
         </td>
         <td class='list_description'>
           <dl>
-            <dt><%= payment.payment_account %></dt>
+            <dt><%= payment[:payment_account] %></dt>
           </dl>
         </td>
         <td class='list_description'>
@@ -40,7 +41,7 @@
         </td>
         <td class='list_description'>
           <dl>
-            <dt><%= payment.payment_status.upcase %></dt>
+            <dt><%= payment.payment_status.upcase if !payment.payment_status.nil? %></dt>
           </dl>
         </td>
         <td class='list_description'>
