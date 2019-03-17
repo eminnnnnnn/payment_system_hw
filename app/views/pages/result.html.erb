@@ -1,28 +1,28 @@
-<h1>Confirmation</h1>
+<h1><%=I18n.t('Confirmation')%></h1>
 <div class="confirmation">
   <table class="check_for_check">
     <tbody>
       <tr>
-        <td class="row_name"> From: </td>
+        <td class="row_name"> <%=I18n.t('From:')%> </td>
         <td class="row_data"> <%= User.find_by(id: current_user.id)[:email]%> </td>
       </tr>
       <tr>
-        <td class="row_name"> To account: </td>
+        <td class="row_name"> <%=I18n.t('To account:')%> </td>
         <td class="row_data"> <%= @current_payment[:payment_account].to_s %> </td>
       </tr>
       <tr>
-        <td class="row_name"> Total: </td>
+        <td class="row_name"> <%=I18n.t('Total:')%> </td>
         <td class="row_data"> <%= number_to_currency(@current_payment[:payment_summa]) %> </td>
       </tr>
       <tr>
-        <td class="row_name"> Your cashback: </td>
+        <td class="row_name"> <%=I18n.t('Your cashback:')%> </td>
         <td class="row_data"> <%= number_to_currency(@current_payment[:cashback] * 0.0001) %> </td>
       </tr>
     </tbody>
   </table>
   <br/>
-  <%= link_to "Cancel", pages_destroy_payment_path(payment_del: @current_payment),{ onclick: "cancel_payment()", id: "cancel_button"} %>
-  <%= link_to "Confirm", pages_confirm_payment_path(payment_confirm: @current_payment, format: :json),{ remote: true, id: "confirm_button"} %>
+  <%= link_to I18n.t("Cancel"), pages_destroy_payment_path(payment_del: @current_payment),{ onclick: "cancel_payment()", id: "cancel_button"} %>
+  <%= link_to I18n.t("Confirm"), pages_confirm_payment_path(payment_confirm: @current_payment, format: :json),{ remote: true, id: "confirm_button"} %>
   <!-- <input type="button" class="confirm_button" onclick="confirm_payment()" value="Confirm" data-remote="true"/> -->
   <!-- <%= button_to "Confirm", pages_confirm_payment_path(payment_confirm: @current_payment),{ remote: true, class: "confirm_button", onclick: "make_payment()" } %> -->
 </div>

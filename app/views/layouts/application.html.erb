@@ -19,16 +19,16 @@
       <ul id="user-info">
         <% if user_signed_in? %>
           <li>
-            <a href=""><%= current_user.email %></a>
+            <a href="/"><%= current_user.email %></a>
           <!--  Balance: <% if !current_user.user_balance.nil? %>
                       <%= number_to_currency(current_user.user_balance) %>
                      <% else %>
                       <%= number_to_currency(0) %>
                      <% end %>-->
           </li>
-          <li><%= link_to "Sign out", destroy_user_session_path, method: :delete %></li>
+          <li><%= link_to I18n.t("Sign out"), destroy_user_session_path, method: :delete %></li>
         <% else %>
-          <li><a href='<%= new_user_session_path %>'>Sign in</a></li>
+          <li><a href='<%= new_user_session_path %>'><%=I18n.t('Sign in')%></a></li>
         <% end %>
       </ul>
     </div>

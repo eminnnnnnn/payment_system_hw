@@ -9,7 +9,6 @@ class PagesController < ApplicationController
   end
 
   def fill
-
   end
 
   def result

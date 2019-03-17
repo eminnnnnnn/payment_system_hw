@@ -1,16 +1,16 @@
 <div class="login_page">
-  <h1>Log in</h1>
+  <h1><%= I18n.t('Log in')%></h1>
 
-  <p style="color: red;"> You should sign in for make payment</p>
+  <p style="color: red;"> <%= I18n.t('You should sign in for make payment')%></p>
   <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
     <div class="field">
     <!--  <%= f.label :email %><br /> -->
-      <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder: "Email address" %>
+      <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder: I18n.t("Email address") %>
     </div>
 
     <div class="field">
     <!--  <%= f.label :password %><br /> -->
-      <%= f.password_field :password, autocomplete: "current-password", placeholder: "Password" %>
+      <%= f.password_field :password, autocomplete: "current-password", placeholder: I18n.t("Password") %>
     </div>
 
   <!--  <% if devise_mapping.rememberable? -%>
@@ -21,7 +21,7 @@
     <% end -%>-->
 
     <div class="actions">
-      <%= f.submit "Log in" %><br/>
+      <%= f.submit I18n.t "Log in" %><br/>
       <%= render "devise/shared/links" %>
     </div>
   <% end %>

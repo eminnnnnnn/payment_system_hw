@@ -4,21 +4,21 @@
     <%= error[0] %>
   <% end %>
 <% end %> -->
-<h1>You chose <%= params[:pay_type] %> payment </h1>
+<h1><%=I18n.t('You chose '+ params[:pay_type] +' payment')%> </h1>
 <!--<h1>Fill the fields</h1>-->
 <br/><br/>
 
 <%= form_tag url_for(controller: "pages", action: "result"),class: "fill-form", method: :get do %>
   <%= image_tag(params[:pay_type] + "_payment.jpg", border: "1", alt: params[:pay_type] + "-payment") %>
   <% if params[:pay_type] != 'mobile' && params[:pay_type] != 'transfer' %>
-    <%= label_tag "Personal Account:" %>
+    <%= label_tag I18n.t("Personal Account:") %>
   <% else %>
-    <%= label_tag "Phone Number:" %>
+    <%= label_tag I18n.t("Phone Number:") %>
   <% end %>
   <%= text_field_tag :pay_acc, nil, maxlength: 23 %><br/>
-  <%= label_tag "Total:" %>
+  <%= label_tag I18n.t("Total:") %>
   <%= text_field_tag :pay_sum,nil, maxlength: 5 %><br/>
-  <%= submit_tag "Confirm Payment" %>
+  <%= submit_tag I18n.t("Confirm Payment") %>
 <% end %>
 <!-- <%= form_with model: @payment, class: "fill_form" do |f| %>
   <%= f.text_field :payment_account %>
